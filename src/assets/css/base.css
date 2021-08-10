@@ -3,7 +3,7 @@
     --back-color: #000;
     --text-color: #333;
     --hover-color: rgba(255, 255, 255, 0.7);
-    --primary-color: #ee4d2d
+    --primary-color: #f8c76c
 }
 
 * {
@@ -13,7 +13,6 @@
 html {
     font-size: 100%;
     line-height: 1.6rem;
-    font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
 
@@ -95,6 +94,28 @@ html {
     border-radius: 5px;
 }
 
-div {
-    background-color: crimson;
+.white {
+    color: white;
+}
+
+.circle-white-trans {
+    --size: 40px;
+    border: 1px solid white;
+    display: flex;
+    width: var(--size);
+    height: var(--size);
+    border-radius: calc(var(--size)/2);
+    background-color: transparent;
+}
+
+.center-flex {
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.text-end {
+    text-align: end;
 }
