@@ -1,0 +1,100 @@
+:root {
+    --white-color: #fff;
+    --back-color: #000;
+    --text-color: #333;
+    --hover-color: rgba(255, 255, 255, 0.7);
+    --primary-color: #ee4d2d
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 100%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* Animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* grow */
+
+@keyframes grow {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+
+/* fadein and grow */
+
+@keyframes fadeIn-grow {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animation-fadein-0-3 {
+    animation: fadeIn ease-in 0.3s;
+    will-change: opacity;
+}
+
+.animation-grow-0-3 {
+    animation: grow ease-in 0.3s;
+    will-change: transform;
+}
+
+.animtion-fadein-grow-0-3 {
+    animation: fadeIn-grow ease-in 0.3s;
+    will-change: opacity, transform;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    left: 0;
+}
+
+.modal__overlay {
+    position: absolute;
+    background-color: #00000020;
+    width: 100%;
+    height: 100%;
+}
+
+.modal__body {
+    width: 300px;
+    margin: auto;
+    height: 300px;
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+}
+
+div {
+    background-color: crimson;
+}
