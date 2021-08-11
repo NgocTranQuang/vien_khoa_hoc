@@ -1,62 +1,113 @@
-.navbar {
-    background-color: gray;
-    box-sizing: border-box;
-    padding: 12px 0;
+.nav-bar__menu_right>ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: flex-end;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
 }
 
 .navbar__image-home {
-    width: 200px;
+    padding: 8px 0;
 }
 
-.navbar__content {
+.nav-bar-item-image {
     align-items: center;
-    justify-content: space-between;
+    display: flex;
+    height: 100%;
 }
 
-.navbar__title {
+.menu-item,
+.apply-item {
     color: white;
-    font-weight: 700;
-    font-size: 14px;
+    padding: 8px 16px;
+    font-weight: bold;
 }
 
-.navbar__right__menu {
-    justify-content: flex-end;
-    align-self: center;
-}
-
-.navbar__title-apply {
-    line-height: 40px;
-    color: #fff;
-    display: inline-block;
-    align-self: flex-end;
-    font-size: 14px;
+.apply-item {
     font-weight: 400;
-    font-family: Poppins, sans-serif;
+    min-width: 115px;
+    padding: 8px 25px;
+}
+
+.search-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 16px;
 }
 
 .background-radius_primary {
-    background: var(--primary-color);
-    padding: 0 25px;
+    background-color: var(--primary-color);
     border-radius: 20px;
-    line-height: 40px;
 }
 
-.navbar__right {
+.menu-group {
+    display: flex;
+    justify-content: center;
+    margin-right: 16px;
     align-items: center;
+    color: white;
 }
 
-.navbar__right__action {
-    justify-content: flex-end;
+.menu-item-menu {
+    color: white;
+    padding: 8px 8px;
+    font-weight: bold;
 }
 
-.gravity-end {
-    text-align: end;
+.nav-bar {
+    background-color: var(--navbar-bg);
 }
 
-.navbar__right__menu-item {
-    justify-content: flex-end;
+@media (max-width: 740px) {
+    .hideInMobile {
+        display: none;
+    }
+    .showInMobile {
+        display: block;
+    }
+    .nav-bar {
+        --navbar-bg: #222;
+    }
+    .nav-bar-item-image {
+        margin: auto;
+    }
+    .nav-bar__menu_right>ul {
+        justify-content: space-between;
+        padding-inline-start: 32px;
+        padding-inline-end: 32px;
+    }
+    .search-item {
+        display: none;
+    }
 }
 
-.menu-item {
-    margin: 0 20px;
+@media (min-width: 740px) and (max-width: 1023px) {
+    .nav-bar {
+        --navbar-bg: #222;
+    }
+    .hideInTablet {
+        display: none;
+    }
+    .showInTablet {
+        display: block;
+    }
+    .search-item {
+        display: flex;
+    }
+}
+
+@media (min-width: 1024px) {
+    .nav-bar {
+        --navbar-bg: transparent;
+    }
+    .showInPC {
+        display: block;
+    }
+    .hideInPC {
+        display: none;
+    }
+    .search-item {
+        display: flex;
+    }
 }

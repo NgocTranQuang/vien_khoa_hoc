@@ -3,17 +3,21 @@
     --back-color: #000;
     --text-color: #333;
     --hover-color: rgba(255, 255, 255, 0.7);
-    --primary-color: #f8c76c
+    --primary-color: #f8c76c;
+    --navbar-bg: #222
 }
 
 * {
     box-sizing: inherit;
+    /* max-width: 100%; */
+    /* overflow: auto */
 }
 
 html {
     font-size: 100%;
     line-height: 1.6rem;
     box-sizing: border-box;
+    background-color: gray;
 }
 
 
@@ -112,8 +116,12 @@ html {
     margin: auto;
 }
 
-.flex {
+.display-flex {
     display: flex;
+}
+
+.flex-1 {
+    flex: 1;
 }
 
 .text-end {
