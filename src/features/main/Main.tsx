@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { PATH_HOME } from '../../constants';
-import NavBar from './base/components/baseNavBar';
+import NavBar from './base/components/nav/baseNavBar';
 export interface MainProps {
 }
 

@@ -8,6 +8,7 @@
 
 .navbar__image-home {
     padding: 8px 0;
+    width: 200px;
 }
 
 .nav-bar-item-image {
@@ -19,14 +20,39 @@
 .menu-item,
 .apply-item {
     color: white;
-    padding: 8px 16px;
+    font-size: 14px;
+    padding: 8px 26px;
     font-weight: bold;
+}
+
+.showMenu {
+    position: relative;
+}
+
+.showMenu:hover .vertical-menu {
+    display: block;
 }
 
 .apply-item {
     font-weight: 400;
     min-width: 115px;
     padding: 8px 25px;
+}
+
+.menu-item:hover,
+.apply-item:hover,
+.menu-group:hover,
+.search-item:hover,
+.nav-bar-item-image:hover {
+    cursor: pointer;
+}
+
+.white:hover {
+    color: var(--primary-color);
+}
+
+.hoverPrimaryColor:hover {
+    color: var(--primary-color);
 }
 
 .search-item {
@@ -57,6 +83,7 @@
 
 .nav-bar {
     background-color: var(--navbar-bg);
+    padding: 8px 0;
 }
 
 @media (max-width: 740px) {
@@ -110,4 +137,8 @@
     .search-item {
         display: flex;
     }
+}
+
+.menu-item-child {
+    padding-left: 40px;
 }

@@ -1,18 +1,28 @@
 import { configureStore, ThunkAction, Action, combineReducers } from '@reduxjs/toolkit';
-import { connectRouter } from 'connected-react-router';
+import { connectRouter, routerMiddleware } from 'connected-react-router';
 import counterReducer from '../features/counter/counterSlice';
 import { history } from '../utils';
+import createSagaMiddleWare from 'redux-saga';
 
+import verticalMenuReducer from '../features/main/base/components/menu/VerticalMenuSlice';
+import rootSaga from './saga';
 
 const rootReducer = combineReducers({
   router: connectRouter(history),
-  couter: counterReducer
+  couter: counterReducer,
+  verticalMenu: verticalMenuReducer
 })
 
 
+const middleWareSaga = createSagaMiddleWare()
+
 export const store = configureStore({
   reducer: rootReducer,
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({
+    thunk: true
+  }).concat(middleWareSaga, routerMiddleware(history))
 });
+middleWareSaga.run(rootSaga)
 
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;

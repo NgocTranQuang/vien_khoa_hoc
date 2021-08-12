@@ -112,6 +112,11 @@ html {
     background-color: transparent;
 }
 
+.circle-white-trans:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
 .center-flex {
     margin: auto;
 }
@@ -126,4 +131,45 @@ html {
 
 .text-end {
     text-align: end;
+}
+
+.vertical-menu,
+.vertical-menu-multilevel {
+    background-color: white;
+    border: 1px solid gray;
+    padding: 0 8px;
+    border-radius: 5px;
+    min-width: 200px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    flex-direction: column;
+    justify-content: center;
+    right: 10px;
+}
+
+.vertical-menu-multilevel {
+    display: block;
+}
+
+.vertical-menu-item {
+    color: var(--text-color);
+    width: 100%;
+    padding: 8px;
+    align-items: center;
+    font-size: 14px;
+    font-weight: normal;
+    white-space: nowrap;
+    display: flex;
+    justify-content: space-between;
+}
+
+.divider {
+    height: 0.2px;
+    /* width: calc(100%-16px);
+    background-color: #bbb8b8; */
+}
+
+.vertical-menu-item:hover {
+    color: var(--primary-color);
 }
