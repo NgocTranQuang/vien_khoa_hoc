@@ -3,16 +3,16 @@ import React from 'react';
 import { useAppDispatch, useAppSelector } from '../../../../../app/hooks';
 import { KeyValueMultiLevelDTO } from '../../../../../models/base/KeyValueDTO';
 import '../nav/index.css';
-import { handleExpandCollapse, verticalMenuSelector } from './VerticalMenuSlice';
+import { verticalMenuActions, verticalMenuSelector } from './VerticalMenuSlice';
 
 export interface VerticalMenuTowLevelProps {
     listMenu?: KeyValueMultiLevelDTO[]
     hasDivider?: boolean,
     show?: boolean,
-    inerRef?: any
+    innerRef?: any
 }
 
-export default function VerticalMenuTowLevel({ listMenu, hasDivider, show, inerRef }: VerticalMenuTowLevelProps) {
+export default function VerticalMenuTowLevel({ listMenu, hasDivider, show, innerRef }: VerticalMenuTowLevelProps) {
 
     var showing = show == true ? 'showInMobile showInTablet' : 'hideInTablet hideInMobile';
 
@@ -20,7 +20,7 @@ export default function VerticalMenuTowLevel({ listMenu, hasDivider, show, inerR
     var { listExpand } = useAppSelector(verticalMenuSelector)
 
     const HandleClickExpand = (index: number) => {
-        useDisPatch(handleExpandCollapse(index))
+        useDisPatch(verticalMenuActions.handleExpandCollapse(index))
     }
 
     const IsExpand = (index: number): boolean => {
@@ -29,7 +29,7 @@ export default function VerticalMenuTowLevel({ listMenu, hasDivider, show, inerR
 
     return (
 
-        <div className={`vertical-menu-multilevel animation-fadein-0-3 ${showing}`} ref={inerRef}>
+        <div className={`vertical-menu-multilevel animation-fadein-0-3 ${showing}`} ref={innerRef}>
             {
                 listMenu?.map((item, index) => {
                     return (

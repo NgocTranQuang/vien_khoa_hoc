@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import { translate } from '../../../../../i18n';
 import './index.css'
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import { Menu, MenuItem, MenuList } from '@material-ui/core';
 import VerticalMenu from '../menu/VerticalMenu';
 import { MENU_COURSES, MENU_HOME, MENU_PARENT } from '../../valueMenu';
 import VerticalMenuTowLevel from '../menu/VerticalMenuTwoLevel';
@@ -59,10 +58,10 @@ export default function NavBar(props: NavBarProps) {
                                     <div className="menu-group hoverPrimaryColor" >
                                         <li className="menu-item-menu">{translate("Menu").toUpperCase()}</li>
                                         <i className="fas fa-bars"></i>
-                                        <VerticalMenuTowLevel listMenu={MENU_PARENT} show={showMenu} inerRef={ref} />
+                                        <VerticalMenuTowLevel listMenu={MENU_PARENT} show={showMenu} innerRef={ref} />
                                     </div>
                                 </li>
-                                <li className="apply-item background-radius_primary">{translate("Apply Now")}</li>
+                                <li className="text-in-primary-button background-radius_primary">{translate("Apply Now")}</li>
 
                                 <li className="search-item circle-white-trans hoverPrimaryColor">
                                     <i className="fas fa-search white   center-flex"></i>

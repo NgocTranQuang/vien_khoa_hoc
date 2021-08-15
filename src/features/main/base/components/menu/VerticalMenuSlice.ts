@@ -25,7 +25,7 @@ export const verticalMenuSlice = createSlice({
 // selectors
 export const verticalMenuSelector = (rootState: RootState) => rootState.verticalMenu
 // actions
-export const { handleExpandCollapse } = verticalMenuSlice.actions;
+export const verticalMenuActions = verticalMenuSlice.actions;
 // reducers
 const verticalMenuReducer = verticalMenuSlice.reducer;
 export default verticalMenuReducer;
