@@ -46,16 +46,23 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    /* background-color: wheat; */
-    padding: 8% 8%;
+    flex: 1;
+    padding: 6%;
     align-items: center;
     justify-content: space-around;
 }
 
+.header-content__text_title {
+    color: rgb(178, 178, 178);
+    font-weight: 400;
+    font-size: 13px;
+}
+
 .header-content__text_des {
     font-size: 47px;
-    line-height: 55px;
+    /* line-height: 55px; */
     font-weight: 700;
+    padding: 3% 0;
     text-align: center;
     color: white;
 }
@@ -130,25 +137,26 @@
 }
 
 @media (max-width: 740px) {
-    .sizeSlide {
-        --height-header: 234px;
+     :root {
+        --height-header: 381px;
     }
     .header-content__text_des {
         font-size: 24px;
+        padding: 1% 0;
     }
 }
 
 @media (min-width: 740px) and (max-width: 1023px) {
-    .sizeSlide {
+     :root {
         --height-header: 520px;
     }
     .header-content__text_des {
-        font-size: 27px;
+        font-size: 31px;
     }
 }
 
 @media (min-width: 1024px) {
-    .sizeSlide {
+     :root {
         --height-header: 520px;
     }
 }
@@ -159,4 +167,84 @@
 
 .z-index2 {
     z-index: 2;
+}
+
+.header-hom__content__slide {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.page-imagine,
+.arrow {
+    height: 50px;
+    border-radius: 25px;
+}
+
+.arrow {
+    color: white;
+    width: 50px;
+    margin: 16px;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: relative;
+    cursor: pointer;
+}
+
+.arrow:hover .page-imagine {
+    display: block;
+}
+
+.page-imagine {
+    width: 120px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-clip: padding-box;
+    object-fit: cover;
+    display: none;
+}
+
+.page-imagine-left {
+    left: 0;
+}
+
+.page-imagine-right {
+    right: 0;
+}
+
+.page-image__content {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.page-image__content-left {
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.page-image__conten-arrow {
+    background-color: transparent;
+    margin: 0;
+}
+
+.page-image__conten-text {
+    flex: 1;
+    text-align: end;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.removeMargin {
+    margin: 0;
+}
+
+.page-image__conten-text-left {
+    text-align: left;
 }
