@@ -60,6 +60,62 @@ html {
     }
 }
 
+
+/* fadein and grow */
+
+@keyframes left-to-center {
+    0% {
+        left: 15%;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        left: calc(50%);
+    }
+}
+
+@keyframes top-to-center {
+    0% {
+        top: 40%;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        top: calc(50%);
+    }
+}
+
+.animation-fadein-1-delay {
+    animation: fadeIn ease-in 1s;
+    will-change: opacity;
+    animation-delay: 1.5s;
+    opacity: 0;
+    position: absolute;
+    bottom: 20%;
+    animation-fill-mode: forwards;
+}
+
+.animation-top-to-center-0-75 {
+    position: absolute;
+    animation: top-to-center ease-in 0.5s;
+    will-change: left;
+    opacity: 0;
+    transform: translateY(-75%);
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+
+.animation-left-to-center-0-75 {
+    position: absolute;
+    animation: left-to-center ease-in 0.75s;
+    will-change: left;
+    top: 15%;
+    opacity: 0;
+    transform: translateX(-50%);
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
 .animation-fadein-0-3 {
     animation: fadeIn ease-in 0.3s;
     will-change: opacity;
