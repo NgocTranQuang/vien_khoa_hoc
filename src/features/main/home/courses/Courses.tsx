@@ -6,13 +6,13 @@ export interface CoursesProps {
 }
 
 export default function Courses(props: CoursesProps) {
-    var listCourse: CoursesItemProps[] = [{
-        name: ""
-    }]
+    // var listCourse: CoursesItemProps[] = [{
+    //     name: ""
+    // }]
 
     return (
         <div className="course">
-            <div className="course__title">
+            {/* <div className="course__title">
                 {translate('Latest Courses')}
             </div>
             <div className="grid wide">
@@ -22,7 +22,7 @@ export default function Courses(props: CoursesProps) {
                     <CoursesItem />
                     <CoursesItem />
                 </div>
-            </div>
+            </div> */}
 
         </div>
     );
