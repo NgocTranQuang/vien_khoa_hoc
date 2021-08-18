@@ -1,0 +1,10 @@
+.course {
+    background-color: white;
+    padding: 100px 0;
+}
+
+.course__title {
+    font-size: 35px;
+    text-align: center;
+    font-weight: 600;
+}

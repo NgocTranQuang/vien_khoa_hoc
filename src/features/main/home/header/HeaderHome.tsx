@@ -19,6 +19,7 @@ interface ImageThumbnail {
 
 
 export default function HeaderHome({ listImage }: HeaderHomeProps) {
+    const LIST_IMAGE = ["http://gonthemes.info/eschool/wp-content/uploads/2018/11/slider02.jpg", "http://gonthemes.info/eschool/wp-content/uploads/2018/11/slider01.jpg"]
 
     const anhNho1 = "http://gonthemes.info/eschool/wp-content/uploads/2018/11/slider02-80x50.jpg"
     const anhNho2 = "http://gonthemes.info/eschool/wp-content/uploads/2018/11/slider01-80x50.jpg";
@@ -69,7 +70,7 @@ export default function HeaderHome({ listImage }: HeaderHomeProps) {
                 <div className="opaticy0-65 z-index2">
                     <NavBar />
                     <div className="header-hom__content__slide">
-                        <div className="arrow hideInMobile animation-fadein-0-3" onClick={preSlide}>
+                        <div className="arrow  animation-fadein-0-3" onClick={preSlide}>
                             <i className="fas fa-chevron-left center-flex"></i>
                             <div className="page-imagine animation-fadein-0-3" style={{ backgroundImage: `url(${thumbnail.img1})` }}>
                                 <div className=" matchParent page-imagine page-imagine-left  ">
@@ -92,7 +93,7 @@ export default function HeaderHome({ listImage }: HeaderHomeProps) {
                             </div>
                             <div className="header-content__text_button background-radius_primary animation-fadein-1-delay">{translate('Visit campus').toUpperCase()}</div>
                         </div>
-                        <div className="arrow hideInMobile animation-fadein-0-3" onClick={nextSlide}>
+                        <div className="arrow  animation-fadein-0-3" onClick={nextSlide}>
                             <i className="fas fa-chevron-right center-flex"></i>
 
                             <div className="page-imagine page-imagine-right animation-fadein-0-3" style={{ backgroundImage: `url(${thumbnail.img2})` }}>

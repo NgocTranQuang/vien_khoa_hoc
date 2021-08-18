@@ -19,3 +19,9 @@
         transform: translateY(0px);
     }
 }
+
+@media (max-width: 740px) {}
+
+@media (min-width: 740px) and (max-width: 1023px) {}
+
+@media (min-width: 1024px) {}

@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import { PATH_HOME } from '../../constants';
-import NavBar from './base/components/nav/baseNavBar';
 import HeaderHome from './home/header/HeaderHome';
+import Home from './home/Home';
 export interface MainProps {
 }
 
@@ -11,7 +11,7 @@ export default function Main(props: MainProps) {
     return (
         <Switch>
             <Route>
-                <HeaderHome listImage={LIST_IMAGE} />
+                <Home />
             </Route>
         </Switch>
     );
