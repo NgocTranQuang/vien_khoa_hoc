@@ -10,19 +10,19 @@ export default function Statistic(props: StatisticProps) {
             <div className="grid wide">
                 <div className="row statistic__row">
                     <div className="col l-3 m-12 c-12 statistic__item">
-                        <div className="statistic__item-number">6789</div>
+                        <div className="statistic__item-number statistic__item-number1"></div>
                         <div className="statistic__item-des">{translate('OF CLASS OF 2018').toUpperCase()}</div>
                     </div>
                     <div className="col l-3 m-12 c-12 statistic__item marginTop-item">
-                        <div className="statistic__item-number">4562</div>
+                        <div className="statistic__item-number statistic__item-number2"></div>
                         <div className="statistic__item-des">{translate('PEOPLE WORKING').toUpperCase()}</div>
                     </div>
                     <div className="col l-3 m-12 c-12 statistic__item marginTop-item">
-                        <div className="statistic__item-number">2345</div>
+                        <div className="statistic__item-number statistic__item-number3"></div>
                         <div className="statistic__item-des">{translate('YEARS OF EXPERIENCEN').toUpperCase()}</div>
                     </div>
                     <div className="col l-3 m-12 c-12 statistic__item marginTop-item">
-                        <div className="statistic__item-number">150</div>
+                        <div className="statistic__item-number statistic__item-number4"></div>
                         <div className="statistic__item-des">{translate('STUDENTS').toUpperCase()}</div>
                     </div>
                 </div>

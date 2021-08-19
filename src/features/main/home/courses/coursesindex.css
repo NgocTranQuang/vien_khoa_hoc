@@ -1,7 +1,7 @@
 .course {
     --radius-card: 5px;
     background-color: white;
-    padding: 100px 0;
+    padding: 100px 0 40px 0;
 }
 
 .course__title {
@@ -31,6 +31,7 @@
 .item-courses {
     background-color: white;
     border-radius: var(--radius-card);
+    height: 465px;
     position: relative;
     margin-bottom: 32px;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -68,6 +69,10 @@
 .item-course__des {
     font-size: 18px;
     margin-top: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .item-course__name {
@@ -87,7 +92,7 @@
     color: white;
     display: inline-block;
     margin-top: 16px;
-    margin-bottom: 32px;
+    /* margin-bottom: 32px; */
     padding: 8px 25px;
     /* position: absolute; */
     cursor: pointer;

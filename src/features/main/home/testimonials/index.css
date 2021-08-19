@@ -1,0 +1,10 @@
+.testimonials {
+    height: 540px;
+    width: 100%;
+    background-image: url('http://gonthemes.info/eschool/wp-content/uploads/2018/10/bgtestimonia.jpg?id=5865');
+}
+
+.testimonials__title {
+    font-weight: 600;
+    font-size: 35px;
+}

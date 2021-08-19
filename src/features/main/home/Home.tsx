@@ -3,7 +3,9 @@ import BellowHeader from './bellowheader/BellowHeader';
 import Courses from './courses/Courses';
 import HeaderHome from './header/HeaderHome';
 import Introduction from './introduction/Introduction';
+import Newsletter from './newsletter/Newsletter';
 import Statistic from './statistic/Statistic';
+import Testimonials from './testimonials/Testimonials';
 
 export interface Homerops {
 }
@@ -18,6 +20,8 @@ export default function Home(props: Homerops) {
             <Introduction />
             <Statistic />
             <Courses />
+            <Newsletter />
+            <Testimonials />
 
         </div>
     );
