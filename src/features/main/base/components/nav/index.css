@@ -73,6 +73,10 @@
     display: inline-block;
 }
 
+.background-radius_primary:hover {
+    background-color: #f3b23a;
+}
+
 .menu-group {
     display: flex;
     justify-content: center;
