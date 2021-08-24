@@ -17,9 +17,9 @@ export default function BellowHeader(props: BellowHeaderProps) {
                         </div>
                         <div className="content">
                             <div className="content-title">
-                                {translate('Programs').toUpperCase()}
+                                {translate('Chương trình').toUpperCase()}
                             </div>
-                            <div className="content-des">{translate('Offering over 400 programs taught by the best professors globally.')}</div>
+                            <div className="content-des">{translate('Cung cấp hơn 400 chương trình được giảng dạy bởi các giáo sư giỏi nhất trên toàn cầu.')}</div>
                         </div>
                     </div>
                     <div className="col  l-4 m-12 c-12 bellowheader-item bellowheader-margin-top">
@@ -28,9 +28,9 @@ export default function BellowHeader(props: BellowHeaderProps) {
                         </div>
                         <div className="content">
                             <div className="content-title">
-                                {translate('Certificate').toUpperCase()}
+                                {translate('Chứng chỉ').toUpperCase()}
                             </div>
-                            <div className="content-des">{translate('Certifications that will connect you to internship and job opportunities.')}</div>
+                            <div className="content-des">{translate('Các chứng chỉ sẽ kết nối bạn với cơ hội thực tập và việc làm.')}</div>
                         </div>
                     </div>
                     <div className="col l-4 m-12 c-12 bellowheader-item bellowheader-margin-top">
@@ -39,9 +39,9 @@ export default function BellowHeader(props: BellowHeaderProps) {
                         </div>
                         <div className="content">
                             <div className="content-title">
-                                {translate('Affordablity').toUpperCase()}
+                                {translate('Khả năng liên kết').toUpperCase()}
                             </div>
-                            <div className="content-des">{translate('Meet with a career coach to assess your skills and career interests.')}</div>
+                            <div className="content-des">{translate('Gặp với giáo viên nghề nghiệp để đánh giá kỹ năng và sở thích nghề nghiệp của bạn.')}</div>
                         </div>
                     </div>
                 </div>

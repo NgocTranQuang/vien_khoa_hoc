@@ -4,15 +4,17 @@ import CoursesItem, { CoursesItemProps } from './CoursesItem';
 import './coursesindex.css'
 import listCourse from './dataCourses';
 export interface CoursesProps {
+    showTitle?: boolean
 }
 
-export default function Courses(props: CoursesProps) {
+export default function Courses({ showTitle = true }: CoursesProps) {
 
     return (
         <div className="course">
-            <div className="course__title">
-                {translate('Latest Courses')}
+            {showTitle && <div className="course__title">
+                {translate('Chương trình đào tạo').toUpperCase()}
             </div>
+            }
             <div className="grid wide">
                 <div className="row row-course">
                     {listCourse.map((item, index) => {

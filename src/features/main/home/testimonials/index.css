@@ -21,9 +21,10 @@
     font-weight: 400;
     font-size: 14px;
     color: #222;
-    text-align: center;
+    text-align: start;
     margin-bottom: 40px;
     word-wrap: break-word;
+    white-space: pre-wrap;
     /* IE 5.5-7 */
 }
 
@@ -39,6 +40,7 @@
     width: 100px;
     height: 100px;
     border-radius: 50px;
+    object-fit: cover;
 }
 
 .nextArrow,

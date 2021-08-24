@@ -5,6 +5,10 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import VerticalMenu from '../menu/VerticalMenu';
 import { MENU_COURSES, MENU_HOME, MENU_PARENT } from '../../valueMenu';
 import VerticalMenuTowLevel from '../menu/VerticalMenuTwoLevel';
+import { makeStyles } from '@material-ui/core';
+import { useHistory } from 'react-router-dom';
+import { PATH_BLOGS, PATH_COURSES, PATH_ROOT } from '../../../../../constants';
+import { PATH_ABOUT_US, PATH_CONTACT } from '../../../../../constants/pathConstants';
 
 
 export interface NavBarProps {
@@ -12,7 +16,10 @@ export interface NavBarProps {
 
 export default function NavBar(props: NavBarProps) {
 
+    let history = useHistory();
+
     const [showMenu, setShowMenu] = useState(false)
+    const [pathActive, setPathActive] = useState<string>(PATH_ROOT)
     const ref = useRef<HTMLElement>();
     const handleMenu = () => {
         setShowMenu(!showMenu)
@@ -31,7 +38,12 @@ export default function NavBar(props: NavBarProps) {
         }
     }, [showMenu])
 
-    console.log('ref', ref);
+    const onClickMenu = (path: string) => {
+        setPathActive(path)
+        history.push(path)
+    }
+
+    const activeStyle = { color: 'var(--primary-color)' };
 
     return (
         <div className="nav-bar">
@@ -45,15 +57,15 @@ export default function NavBar(props: NavBarProps) {
                     <div className="col l-9 m-9 c-12">
                         <div className="nav-bar__menu_right">
                             <ul >
-                                <li className="menu-item showInPC hideInMobile hideInTablet showMenu hoverPrimaryColor">{translate("Home").toUpperCase()}
+                                <li className="menu-item showInPC hideInMobile hideInTablet showMenu hoverPrimaryColor" style={pathActive === PATH_ROOT ? activeStyle : {}} onClick={() => { onClickMenu(PATH_ROOT) }}>{translate("Trang chủ").toUpperCase()}
                                     <VerticalMenu listMenu={MENU_HOME} hasDivider={true} />
                                 </li>
-                                <li className="menu-item showInPC hideInMobile hideInTablet showMenu hoverPrimaryColor">{translate("Courses").toUpperCase()}
+                                <li className="menu-item showInPC hideInMobile hideInTablet showMenu hoverPrimaryColor" style={pathActive === PATH_COURSES ? activeStyle : {}} onClick={() => { onClickMenu(PATH_COURSES) }}>{translate("Đào tạo").toUpperCase()}
                                     <VerticalMenu listMenu={MENU_COURSES} hasDivider={true} />
                                 </li>
-                                <li className="menu-item showInPC hideInMobile hideInTablet showMenu hoverPrimaryColor">{translate("blog").toUpperCase()}</li>
-                                <li className="menu-item showInPC hideInMobile hideInTablet showMenu hoverPrimaryColor">{translate("About us").toUpperCase()}</li>
-                                <li className="menu-item showInPC hideInMobile hideInTablet showMenu hoverPrimaryColor">{translate("contact").toUpperCase()}</li>
+                                <li className="menu-item showInPC hideInMobile hideInTablet showMenu hoverPrimaryColor" style={pathActive === PATH_BLOGS ? activeStyle : {}} onClick={() => { onClickMenu(PATH_BLOGS) }}>{translate("Sự kiện-Ấn phẩm").toUpperCase()}</li>
+                                <li className="menu-item showInPC hideInMobile hideInTablet showMenu hoverPrimaryColor" style={pathActive == PATH_ABOUT_US ? activeStyle : {}} onClick={() => { onClickMenu(PATH_ABOUT_US) }}>{translate("Giới thiệu").toUpperCase()}</li>
+                                <li className="menu-item showInPC hideInMobile hideInTablet showMenu hoverPrimaryColor" style={pathActive == PATH_CONTACT ? activeStyle : {}} onClick={() => { onClickMenu(PATH_CONTACT) }}>{translate("Liên hệ").toUpperCase()}</li>
                                 <li className=" hideInPC showInMobile showInTablet showMenu " onClick={() => { handleMenu() }}>
                                     <div className="menu-group hoverPrimaryColor" >
                                         <li className="menu-item-menu">{translate("Menu").toUpperCase()}</li>
@@ -61,7 +73,7 @@ export default function NavBar(props: NavBarProps) {
                                         <VerticalMenuTowLevel listMenu={MENU_PARENT} show={showMenu} innerRef={ref} />
                                     </div>
                                 </li>
-                                <li className="text-in-primary-button background-radius_primary">{translate("Apply Now")}</li>
+                                <li className="text-in-primary-button background-radius_primary">{translate("Đăng ký")}</li>
 
                                 <li className="search-item circle-white-trans hoverPrimaryColor">
                                     <i className="fas fa-search white   center-flex"></i>

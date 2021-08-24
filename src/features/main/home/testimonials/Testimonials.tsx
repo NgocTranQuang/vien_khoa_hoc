@@ -4,6 +4,7 @@ import { translate } from '../../../../i18n/index';
 import ItemSlide from './ItemSlide';
 import { Slide } from 'react-slideshow-image';
 import slideList, { TestimonialsDTO } from './TestimonialsData';
+import BaseProps from '../../../base/BaseProps';
 
 
 
@@ -18,13 +19,13 @@ const properties = {
 
 };
 
-export interface TestimonialsProps {
+export interface TestimonialsProps extends BaseProps {
 }
 
 export default function Testimonials(props: TestimonialsProps) {
     return (
-        <div className="testimonials">
-            <h3 className="testimonials__title">{translate('Testimonials')}</h3>
+        <div className="testimonials" ref={props.innerRef}>
+            <h3 className="testimonials__title section-home">{translate('Ban điều hành').toUpperCase()}</h3>
             <div className="testimonials__slide">
                 <Slide  {...properties}>
                     {slideList.map((item: TestimonialsDTO, index: number) => {
@@ -35,9 +36,7 @@ export default function Testimonials(props: TestimonialsProps) {
                             <div className="itemSlide__position">{item.position}</div>
                         </div>)
                     })}
-
                 </Slide>
-                {/* <ItemSlide /> */}
             </div>
 
         </div>

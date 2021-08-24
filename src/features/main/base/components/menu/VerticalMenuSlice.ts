@@ -2,10 +2,11 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { RootState } from '../../../../../app/store'
 
 export interface VerticalMenuState {
-    listExpand?: number[]
+    listExpand?: number[],
+    onClickMenu?: { key: string, time: number }
 }
 const initialState: VerticalMenuState = {
-    listExpand: []
+    listExpand: [],
 }
 
 export const verticalMenuSlice = createSlice({
@@ -19,6 +20,9 @@ export const verticalMenuSlice = createSlice({
             } else {
                 state.listExpand.push(action.payload)
             }
+        },
+        onClickMenu: (state, action: PayloadAction<{ key: string, time: number }>) => {
+            state.onClickMenu = action.payload
         }
     }
 })

@@ -2,7 +2,7 @@ import { translate } from "../../../../i18n";
 import { KeyValueDTO, KeyValueMultiLevelDTO } from "../../../../models/base/KeyValueDTO";
 
 export const MENU_HOME: KeyValueDTO[] = [
-    { key: "Lời chào của Viện trưởng", value: translate("Lời chào của Viện trưởng") },
+    { key: "Lời chào của viện trưởng", value: translate("Lời chào của viện trưởng") },
     { key: "Tầm nhìn và sứ mênh", value: translate("Tầm nhìn và sứ mệnh") },
     { key: "Chức năng và Nhiệm vụ", value: translate("Chức năng và Nhiệm vụ") },
     { key: "Ban Điều Hành", value: translate("Ban Điều Hành") }

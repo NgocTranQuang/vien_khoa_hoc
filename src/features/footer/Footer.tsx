@@ -4,6 +4,7 @@ import { translate } from '../../i18n/index';
 export interface FooterProps {
 }
 
+
 export default function Footer(props: FooterProps) {
     return (
         <div className="footer">
@@ -27,16 +28,16 @@ export default function Footer(props: FooterProps) {
                             </div>
                         </div>
                     </div>
-                    <div className="col l-4 m-6 c-12 footer__recent-post">
+                    <div className="col l-4 m-6 c-12 footer__recent-post marginInMobile">
                         <div className="footer__title">{translate('Recent post')}</div>
                         <ul className="list-account marginTop25">
-                            <li className="list-account__item"><a href="#">{translate('Motion animation and VR headset')}</a></li>
-                            <li className="list-account__item"><a href="#">{translate('Awesome tip to become CEO of big network startup')}</a></li>
-                            <li className="list-account__item"><a href="#">{translate('Top 5 amazing changing for the social media industry')}</a></li>
+                            <li className="list-account__item">{translate('Motion animation and VR headset')}</li>
+                            <li className="list-account__item">{translate('Awesome tip to become CEO of big network startup')}</li>
+                            <li className="list-account__item">{translate('Top 5 amazing changing for the social media industry')}</li>
 
                         </ul>
                     </div>
-                    <div className=" col l-4 m-6 c-12 footer__contact-us">
+                    <div className=" col l-4 m-6 c-12 footer__contact-us marginInMobile">
                         <div className="footer__title">{translate('Contact us')}</div>
 
                         <div className="footer__contact-us__item marginTop25">

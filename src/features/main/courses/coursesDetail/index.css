@@ -1,0 +1,9 @@
+.courses-img {
+    margin: auto;
+}
+
+.courses-detail {
+    display: flex;
+    padding: 32px 0;
+    flex-direction: column;
+}

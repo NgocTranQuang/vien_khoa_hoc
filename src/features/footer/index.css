@@ -43,19 +43,13 @@
     height: 40px;
 }
 
-.list-account__item {
-    /* list-style: none; */
-    text-decoration: none;
-    color: #777;
-}
-
 .list-account {
     text-decoration: none;
     /* list-style: none; */
     padding-left: 18px;
 }
 
-.list-account__item a {
+.list-account__item {
     text-decoration: none;
     color: #777;
     font-size: 14px;
@@ -91,4 +85,10 @@
     font-size: 14px;
     background-color: #111;
     text-align: center;
+}
+
+@media (max-width: 740px) {
+    .marginInMobile {
+        margin-top: 32px;
+    }
 }

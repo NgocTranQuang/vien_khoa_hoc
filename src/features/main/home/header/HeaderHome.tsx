@@ -45,6 +45,8 @@ export default function HeaderHome({ listImage }: HeaderHomeProps) {
     const nextSlide = () => {
         slideRef.current?.goNext()
     }
+
+
     return (
 
         <div className="header-home">
@@ -86,12 +88,12 @@ export default function HeaderHome({ listImage }: HeaderHomeProps) {
                             </div>
                         </div>
                         <div className="header-content__text">
-                            <div className="header-content__text_title animation-left-to-center-0-75">{translate('How do i get to the university?')}</div>
+                            <div className="header-content__text_title animation-left-to-center-0-75">{translate('Làm thế nào để đăng ký học?')}</div>
                             <div className="header-content-des animation-top-to-center-0-75">
-                                <div className="header-content__text_des">{translate('Welcom to Eschool')}</div>
+                                <div className="header-content__text_des">{translate('Welcom to IRICS')}</div>
                                 <div className="header-content__text_des" >{translate('Best learning institutions')}</div>
                             </div>
-                            <div className="header-content__text_button background-radius_primary animation-fadein-1-delay">{translate('Visit campus').toUpperCase()}</div>
+                            <div className="header-content__text_button background-radius_primary animation-fadein-1-delay">{translate('Viện khoa học').toUpperCase()}</div>
                         </div>
                         <div className="arrow  animation-fadein-0-3" onClick={nextSlide}>
                             <i className="fas fa-chevron-right center-flex"></i>

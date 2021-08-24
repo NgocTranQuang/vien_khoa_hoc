@@ -159,3 +159,7 @@
 .menu-item-child {
     padding-left: 40px;
 }
+
+.active-menu {
+    color: var(--primary-color);
+}

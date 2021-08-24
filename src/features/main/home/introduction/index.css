@@ -12,12 +12,14 @@
 .introduction__title {
     font-size: 35px;
     font-weight: 600;
+    line-height: 40px;
     color: #222222;
 }
 
 .introduction__des {
     font-weight: 300;
     margin-top: 40px;
+    white-space: pre-wrap;
     font-size: 18px;
     color: #999999;
 }

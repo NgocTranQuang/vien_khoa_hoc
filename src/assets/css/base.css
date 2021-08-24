@@ -21,6 +21,11 @@ html {
     box-sizing: border-box;
 }
 
+.section-home {
+    font-size: 35px;
+    font-weight: 600;
+}
+
 
 /* Animation */
 
@@ -207,6 +212,8 @@ html {
 
 .vertical-menu-multilevel {
     display: block;
+    right: unset;
+    left: 0px;
 }
 
 .vertical-menu-item {
