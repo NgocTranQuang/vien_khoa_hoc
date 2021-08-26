@@ -27,21 +27,21 @@ export default function HomePage(props: Homerops) {
     var onClick = useAppSelector(verticalMenuSelector).onClickMenu;
     console.log("Home", onClick);
 
-    // useEffect(() => {
-    if (onClick?.key == MENU_HOME[0].key) {
-        // Lời chào của viện trưởng
-        introductionRef.current?.scrollIntoView()
-    } else if (onClick?.key == MENU_HOME[1].key) {
-        //Tầm nhìn và sứ mệnh
-        statisticRef.current?.scrollIntoView()
-    } else if (onClick?.key == MENU_HOME[2].key) {
-        // Chức năng và nhiệm vụ
-        functionRef.current?.scrollIntoView()
-    } else if (onClick?.key == MENU_HOME[3].key) {
-        // Ban lãnh đạo
-        boardRef.current?.scrollIntoView()
-    }
-    // }, [])
+    useEffect(() => {
+        if (onClick?.key == MENU_HOME[0].key) {
+            // Lời chào của viện trưởng
+            introductionRef.current?.scrollIntoView()
+        } else if (onClick?.key == MENU_HOME[1].key) {
+            //Tầm nhìn và sứ mệnh
+            statisticRef.current?.scrollIntoView()
+        } else if (onClick?.key == MENU_HOME[2].key) {
+            // Chức năng và nhiệm vụ
+            functionRef.current?.scrollIntoView()
+        } else if (onClick?.key == MENU_HOME[3].key) {
+            // Ban lãnh đạo
+            boardRef.current?.scrollIntoView()
+        }
+    }, [onClick])
     return (
         <div>
             <HeaderHome listImage={LIST_IMAGE} />

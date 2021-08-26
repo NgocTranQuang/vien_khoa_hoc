@@ -10,4 +10,4 @@ export const PATH_COURSES_KTPM = "/kythuatphanmem";
 export const PATH_COURSES_HTTT = "/hethongthongtin";
 export const PATH_COURSES_AI = "/ai";
 export const PATH_COURSES_IOT = "/iot";
-export const PATH_COURSES_ANTT = "/antoanthongtin";
+export const PATH_COURSES_ATTT = "/antoanthongtin";

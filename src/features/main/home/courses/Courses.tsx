@@ -18,7 +18,7 @@ export default function Courses({ showTitle = true }: CoursesProps) {
             <div className="grid wide">
                 <div className="row row-course">
                     {listCourse.map((item, index) => {
-                        return <CoursesItem {...item} />
+                        return <CoursesItem {...item} key={index} />
                     })}
                 </div>
             </div>

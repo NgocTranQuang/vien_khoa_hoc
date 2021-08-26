@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useParams } from 'react-router-dom';
 import { PATH_COURSES_DETAIL } from '../../../../constants';
 import { ATTT, CoursesDetailDTO, HTTT, IOT, KTPM, TTNT } from './CoursesDetailData';
-import { PATH_COURSES_AI, PATH_COURSES_ANTT, PATH_COURSES_HTTT, PATH_COURSES_IOT, PATH_COURSES_KTPM } from '../../../../constants/pathConstants';
+import { PATH_COURSES_AI, PATH_COURSES_ATTT, PATH_COURSES_HTTT, PATH_COURSES_IOT, PATH_COURSES_KTPM } from '../../../../constants/pathConstants';
 import { translate } from '../../../../i18n';
 import './index.css'
 export interface CoursesDetailProps {
@@ -19,7 +19,7 @@ export default function CoursesDetail(props: CoursesDetailProps) {
         data = IOT
     } else if (PATH_COURSES_AI.includes(coursesdetail)) {
         data = TTNT
-    } else if (PATH_COURSES_ANTT.includes(coursesdetail)) {
+    } else if (PATH_COURSES_ATTT.includes(coursesdetail)) {
         data = ATTT
     }
     return (
@@ -32,7 +32,7 @@ export default function CoursesDetail(props: CoursesDetailProps) {
                     <h3>{translate('Triển vọng nghề nghiệp')}</h3>
                     <ul>
                         {data.trienVong.map((item, index) => {
-                            return <li>{item}</li>
+                            return <li key={index}>{item}</li>
                         })}
                     </ul>
                 </div>}

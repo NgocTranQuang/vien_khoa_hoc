@@ -237,3 +237,10 @@ html {
 .vertical-menu-item:hover {
     color: var(--primary-color);
 }
+
+.error-message {
+    font-size: 14px;
+    font-weight: normal;
+    padding-left: 8px;
+    color: red;
+}

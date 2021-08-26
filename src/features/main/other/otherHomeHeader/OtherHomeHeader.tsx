@@ -6,7 +6,7 @@ export interface CoursesHeaderProps {
     title: string
 }
 
-export default function CoursesHeader({ title }: CoursesHeaderProps) {
+export default function OtherHomeHeader({ title }: CoursesHeaderProps) {
     return (
         <div className="courses-header">
             <div className="courses-header__opaticy">

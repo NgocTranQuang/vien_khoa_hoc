@@ -4,8 +4,11 @@ import { PATH_HOME, PATH_ROOT } from '../../constants';
 import Courses from './home/courses/Courses';
 import HeaderHome from './home/header/HeaderHome';
 import HomePage from './home/HomePage';
-import { PATH_COURSES } from '../../constants/pathConstants';
+import { PATH_ABOUT_US, PATH_BLOGS, PATH_COURSES, PATH_CONTACT } from '../../constants/pathConstants';
 import CoursesPage from './courses/CoursesPage';
+import AboutUsPage from './aboutUs/AboutUsPage';
+import ContactPage from './contacts/ContactPage';
+import BlogPage from './blogs/BlogPage';
 export interface MainProps {
 }
 
@@ -15,6 +18,15 @@ export default function Main(props: MainProps) {
         <Switch>
             <Route path={PATH_COURSES}>
                 <CoursesPage />
+            </Route>
+            <Route path={PATH_BLOGS}>
+                <BlogPage />
+            </Route>
+            <Route path={PATH_ABOUT_US}>
+                <AboutUsPage />
+            </Route>
+            <Route path={PATH_CONTACT}>
+                <ContactPage />
             </Route>
             <Route>
                 <HomePage />

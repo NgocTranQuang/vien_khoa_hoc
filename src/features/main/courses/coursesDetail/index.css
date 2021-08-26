@@ -1,5 +1,7 @@
 .courses-img {
     margin: auto;
+    width: 70%;
+    height: auto;
 }
 
 .courses-detail {

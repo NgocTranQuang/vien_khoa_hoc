@@ -3,7 +3,14 @@ import { RootState } from '../../../../../app/store'
 
 export interface VerticalMenuState {
     listExpand?: number[],
-    onClickMenu?: { key: string, time: number }
+    onClickMenu?: ClickMenuDTO
+}
+export interface ClickMenuDTO {
+    key: string,
+    value: string,
+    time: number,
+    type: 'scroll' | 'push'
+
 }
 const initialState: VerticalMenuState = {
     listExpand: [],
@@ -21,7 +28,7 @@ export const verticalMenuSlice = createSlice({
                 state.listExpand.push(action.payload)
             }
         },
-        onClickMenu: (state, action: PayloadAction<{ key: string, time: number }>) => {
+        onClickMenu: (state, action: PayloadAction<ClickMenuDTO>) => {
             state.onClickMenu = action.payload
         }
     }

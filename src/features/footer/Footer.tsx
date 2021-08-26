@@ -12,7 +12,26 @@ export default function Footer(props: FooterProps) {
                 <div className="row">
                     <div className="col l-4 m-6 c-12 footer__about-us">
                         <div className="footer__title">{translate('About Us').toUpperCase()}</div>
-                        <div className="footer__des marginTop25">{translate('Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam est usus legentis in iis qui facit eorum claritatem')}</div>
+                        <div className="footer__des marginTop25">
+                            <ul className="list-account">
+                                <li>
+                                    VIỆN NGHIÊN CỨU & SÁNG TẠO KHOA HỌC MÁY TÍNH
+                                </li>
+                                <li>
+                                    Institute of Research & Innovation in  Computer Science
+                                </li>
+                                <li>
+                                    Tên viết tắt:        IRICS
+                                </li>
+                                <li>
+                                    Năm thành lập:   07-2021
+
+                                </li>
+                                <li>
+                                    Mã số thuế: abcxyz
+                                </li>
+                            </ul>
+                        </div>
                         <div className="footer__social">
                             <div className="social-parent">
                                 <i className="fab fa-facebook-square  social fa-2x"></i>

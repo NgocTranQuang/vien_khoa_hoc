@@ -4,7 +4,7 @@ import './index.css'
 import introductionData from './introductionData';
 
 export interface IntroductionProps {
-    innerRef: any
+    innerRef?: any
 }
 
 export default function Introduction({ innerRef }: IntroductionProps) {

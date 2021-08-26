@@ -23,6 +23,7 @@
     color: white;
     font-size: 14px;
     padding: 8px 26px;
+    text-align: center;
     font-weight: bold;
 }
 
@@ -158,8 +159,4 @@
 
 .menu-item-child {
     padding-left: 40px;
-}
-
-.active-menu {
-    color: var(--primary-color);
 }
