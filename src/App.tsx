@@ -1,4 +1,3 @@
-import React, { MouseEventHandler, useState } from 'react';
 import './assets/css/grid.css';
 import './assets/css/base.css';
 import './assets/css/App.css';
@@ -18,7 +17,6 @@ function App() {
         <Footer />
       </footer>
       <FooterBottom />
-
 
 
     </div>

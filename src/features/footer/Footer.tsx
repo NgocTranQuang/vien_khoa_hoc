@@ -11,7 +11,7 @@ export default function Footer(props: FooterProps) {
             <div className="grid wide">
                 <div className="row">
                     <div className="col l-4 m-6 c-12 footer__about-us">
-                        <div className="footer__title">{translate('About Us').toUpperCase()}</div>
+                        <div className="footer__title">{translate('Về chúng tôi').toUpperCase()}</div>
                         <div className="footer__des marginTop25">
                             <ul className="list-account">
                                 <li>
@@ -48,7 +48,7 @@ export default function Footer(props: FooterProps) {
                         </div>
                     </div>
                     <div className="col l-4 m-6 c-12 footer__recent-post marginInMobile">
-                        <div className="footer__title">{translate('Recent post')}</div>
+                        <div className="footer__title">{translate('Sự kiện ấn phẩm mới')}</div>
                         <ul className="list-account marginTop25">
                             <li className="list-account__item">{translate('Motion animation and VR headset')}</li>
                             <li className="list-account__item">{translate('Awesome tip to become CEO of big network startup')}</li>
@@ -57,7 +57,7 @@ export default function Footer(props: FooterProps) {
                         </ul>
                     </div>
                     <div className=" col l-4 m-6 c-12 footer__contact-us marginInMobile">
-                        <div className="footer__title">{translate('Contact us')}</div>
+                        <div className="footer__title">{translate('Liên hệ')}</div>
 
                         <div className="footer__contact-us__item marginTop25">
                             <i className="fas fa-map-marker-alt footer__contact-us__item-icon"></i>
