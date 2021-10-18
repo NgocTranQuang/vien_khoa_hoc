@@ -2,7 +2,7 @@ import * as React from 'react';
 import { translate } from '../../../../i18n/index';
 import './index.css'
 import InputField from './InputField';
-import { useForm, Control } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import ContactDTO from '../../../../models/student/ContactDTO';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
